@@ -134,3 +134,26 @@ li
 {
     border: 1px solid white
 }
+
+.p-cast
+{
+    width: 690px;
+    float: left;
+    padding: 20px;
+    color: white;
+}
+
+.cast, img
+{
+    float: left;
+}
+
+.cast
+{
+    width: 100%;
+}
+
+.cast > h3
+{
+    font-family: "Special Gothic Expanded One", sans-serif;;
+}
