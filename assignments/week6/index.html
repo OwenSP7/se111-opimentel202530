@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 pay calculator</title>
+</head>
+<body>
+<h1>Pay calculator</h1>
+        
+
+    <script>
+        var hourlyWage = prompt("Enter your hourly wage")
+        var hoursWorked = prompt("Enter your hours worked") * 2
+        var tax = prompt("Enter your tax percentage")
+
+        var grossPay = (Number(hourlyWage) * Number(hoursWorked)).toFixed(2)
+        var samsCut = (Number(grossPay) * (Number(tax) / 100)).toFixed(2)
+        var netPay =  (Number(grossPay) - Number(samsCut)).toFixed(2)
+       
+        alert(`Gross Pay: ${grossPay}\nUncle Sams Cut: ${samsCut}\nNet Pay: ${netPay}`)
+        
+    </script>
+
+
+
+</body>
+</html>
