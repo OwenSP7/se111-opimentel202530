@@ -49,6 +49,88 @@
         {
            console.log(`Drink: ${drinks[i]},Drink Type: ${drinkTypes[i]}`)
         }
+
+        //Associative arrays
+
+        var sportsteams = [];
+        sportsteams["baseball"] = "Red Sox"
+        sportsteams["Basketball"] = "Celtics"
+        sportsteams["football"] = "Patriots"
+
+        console.log(sportsteams["baseball"])
+
+        //Js object notation
+
+        var tigerKingCastMember =
+        {
+            name:"Joe Exotic",
+            job:"tiger handler",
+            residence:"Olkahoma",
+            arrested:true,
+            lovesTigers:true,
+            age:62,
+            sayHello:function(){console.log(`Hello from ${this.name}`)}
+        }
+
+        var tigerKingCastMember2 =
+        {
+            name: "Carole Baskin",
+            job: "CEO",
+            residence: "Florida",
+            arrested: false,
+            lovesTigers: false,
+            age: 63,
+            sayHello:function(){console.log(`Hello from ${this.name}`)}
+        }
+
+        var tigerKingCastMember3 =
+        {
+            name: "Jeff Lowe",
+            job: "Con-man",
+            residence: "Olkahoma",
+            arrested: true,
+            lovesTigers: true,
+            age: 67,
+            sayHello:function(){console.log(`Hello from ${this.name}`)}
+        }
+
+        var tigerKingCastMember4 =
+        {
+            name: "Don lewis",
+            job: "tiger handler",
+            residence: "florida",
+            arrested: false,
+            lovesTigers: false,
+            age: 84,
+            sayHello:function(){console.log(`Hello from ${this.name}`)}
+        }
+
+        var person = new tigerKingCastMember();
+
+        person.job = "trapper"
+        person.name = "Ervil Joe "
+
+
+        var characters = 
+        [
+            tigerKingCastMember,
+            tigerKingCastMember2,
+            tigerKingCastMember3,
+            tigerKingCastMember4
+        ]
+
+        //example of forEach loop
+        characters.forEach(function(item, character)
+        {
+            console.log(item.name, item.job, item.arrested)
+        })
+
+        //example of for in loop
+        for(let key in characters)
+        {
+            console.log(key)
+            page.innerHTML += `<p>Name: ${characters[key].name}, Age: ${characters[key].age}, Occupation${characters[key].job}</p>`
+        }
     </script>
 </body>
 </html>
